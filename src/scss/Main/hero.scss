@@ -1,0 +1,59 @@
+.hero {
+    // .hero__body
+    &__container{
+        display: flex;
+    }
+    &__body {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+
+    // .hero__title
+
+    &__title {
+        font-weight: 600;
+        font-size: 147px;
+        @media(max-width:1441px){
+            font-size: 100px;
+        }
+    }
+
+    // .hero__subtitle
+
+    &__subtitle {
+        font-weight: 500;
+        font-size: 48px;
+        line-height: 59px;
+        max-width: 780px;
+        width: 100%;
+        @media(max-width:1441px){
+            font-size: 36px;
+        }
+    }
+
+    // .hero__discription
+
+    &__discription {
+        font-weight: 400;
+        font-size: 37px;
+        line-height: 45px;
+        color: #959595;
+        max-width: 810px;
+        width: 100%;
+        @media(max-width:1441px){
+            font-size: 30px;
+        }
+    }
+
+    // .hero__logo
+
+    &__logo {
+    }
+
+    // .hero__buttons
+
+    &__buttons {
+    }
+}
+

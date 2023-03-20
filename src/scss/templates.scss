@@ -1,0 +1,71 @@
+.button {
+    padding: 18px 35px;
+    border: 2px solid #FFFFFF;
+    border-radius: 50px;
+    transition: all .10s ease-in-out;
+    background-size: 100%;
+    font-weight: 400;
+    display: inline-block;
+    vertical-align: middle;
+    box-sizing: border-box;
+    background-color: transparent;
+    color: #fff;
+    cursor: pointer;
+    position: relative;
+    font-family: $fontMontserrat;
+    &__contact {
+       
+        &::before{
+            border-radius: inherit;
+            background: linear-gradient(90deg, rgba(84,214,255,1) 13%, rgba(194,117,255,1) 56%, rgba(243,106,255,1) 92%);
+            content: '';    
+            display: block;
+            height: 100%;
+            position: absolute;
+            top: 0; 
+            left: 0;
+            opacity: 0;
+            width: 100%;
+            z-index: -100;
+            transition: opacity .3s;
+        }
+        &:hover:before{
+            opacity: 1;
+          
+        }
+        &:hover:before.button{
+            border: none;
+        }
+        
+       
+    }
+
+    // .button__buy
+
+    &__buy {
+        border: unset;
+        padding: 18px 45px;
+        background: linear-gradient(90deg, rgba(84,214,255,1) 13%, rgba(194,117,255,1) 56%, rgba(243,106,255,1) 92%);
+        &::before{
+            border-radius: inherit;
+            content: '';    
+            display: block;
+            height: 100%;
+            position: absolute;
+            top: 0; 
+            left: 0;
+            opacity: 0;
+            width: 100%;
+            z-index: 2;
+            transition: opacity .3s;
+            background: unset;
+        }
+        &:hover:before{
+            opacity: 1;
+        }
+       
+          
+    }
+}
+
+
