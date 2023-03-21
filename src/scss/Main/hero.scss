@@ -2,11 +2,20 @@
     // .hero__body
     &__container{
         display: flex;
+        align-items: center;
+        @media(max-width:1280px){
+            flex-direction: column-reverse;
+        }
     }
     &__body {
         display: flex;
         flex-direction: column;
         gap: 40px;
+        align-items: center;
+        @media(max-width:991px){
+            text-align: center;
+             gap: 11px;
+        }
     }
 
     // .hero__title
@@ -14,9 +23,17 @@
     &__title {
         font-weight: 600;
         font-size: 147px;
+        background: linear-gradient(103.59deg, #54D6FF 13.23%, #C275FF 56.28%, #F36AFF 91.95%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
         @media(max-width:1441px){
             font-size: 100px;
         }
+        @media(max-width:991px){
+            font-size: 43px;
+            line-height: 72px;
+        };
     }
 
     // .hero__subtitle
@@ -27,9 +44,16 @@
         line-height: 59px;
         max-width: 780px;
         width: 100%;
+        &::selection{
+            color: #98FF73;
+        }
         @media(max-width:1441px){
             font-size: 36px;
         }
+        @media(max-width:991px){
+            font-size: 22px;
+            line-height: 26px;
+        };
     }
 
     // .hero__discription
@@ -41,19 +65,46 @@
         color: #959595;
         max-width: 810px;
         width: 100%;
+        &::selection{
+            color: #98FF73;
+        }
         @media(max-width:1441px){
             font-size: 30px;
         }
+        @media(max-width:991px){
+            font-size: 20px;
+            line-height: 24px;
+        };
     }
 
     // .hero__logo
 
     &__logo {
+        @media(max-width:991px){
+            width: 450px;
+            height: 450px;
+            margin: 0 auto;
+        }
+        @media(max-width:525px){
+            width: 250px;
+            height: 250px;
+        }
+        max-width:645px;
+        width: 100%;
     }
-
-    // .hero__buttons
-
-    &__buttons {
+    &__buttons{
+        display: flex;
+        gap: 24px ;
     }
+    
+    &__buy,
+    &__contact{
+        font-weight: 600;
+
+    }
+    
+    
+
+   
 }
 

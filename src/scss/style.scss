@@ -113,7 +113,11 @@
 //   @import "footer"; 
 //   @import "burger"; 
 @import "./Main/hero.scss";
-@import "./Main/Idea.scss";
+@import "./Main//Idea/idea.scss";
+@import "./Main//Idea/idea-mobile.scss";
+@import "./Main/grant.scss";
+
+
 
  
   //</ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ

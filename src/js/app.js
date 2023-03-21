@@ -2,9 +2,6 @@ import * as flsFunctions from "./modules/functions.js";
 
 flsFunctions.isWebp();
 
-/*
-import Swiper, { Navigation, Pagination } from 'swiper';
-const swiper = new Swiper();
-*/
  
 import { setActive } from "./modules/burger.js";
+import { ideaSwiper } from "./modules/Swiper.js";

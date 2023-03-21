@@ -10,13 +10,18 @@
         align-items: center;
         padding: 37px 0 37px 0;
         font-family: $fontMontserrat;
-            // .header__logo
+        &__name{
+            @media(max-width:768){
+                font-size: 22px;
+            }
+        }
             &__nav{
                 display: flex;
                 margin-left: auto;
             transition: all .4s ease-in-out;
 
                 @media(max-width:1280px){
+                    
                     position: fixed;
                     top: 0;
                     bottom: 0;
@@ -31,8 +36,9 @@
                     margin: 0;
                     align-items: center;
                     padding-top: 124.1px;
-                    transform: translateX(-100%);
+                    transform: translateX(-121%);
                     background: linear-gradient(103.59deg, #54D6FF 13.23%, #C275FF 56.28%, #F36AFF 91.95%);
+                    overflow-y: hidden;
                 }
             }
             &__nav.active{
@@ -45,6 +51,15 @@
             font-family: $fontChakra;
             font-size: 36px;
             font-weight: 600;
+            display: flex;
+            gap: 11px ;
+            @media(max-width:768px){
+                font-size: 27px;
+                svg{
+                    width: 30px;
+                }
+            }
+                
             }
     
         // .header__list
@@ -54,7 +69,7 @@
             gap: 40px;
             font-weight: 500;
             padding: 10.5px 40px;
-            @media(min-width: 1280px){
+            @media(min-width: 1281px){
                 border-right: 1px solid;
             }
             @media(max-width:1280px){
@@ -88,7 +103,7 @@
                 &:after{
                     content: "";
                     position: absolute;
-                    width: 250px;
+                    width: 200px;
                     height: 1px;
                     background: #fff;
                     left: 0;
