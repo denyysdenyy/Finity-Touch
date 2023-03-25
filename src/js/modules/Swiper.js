@@ -10,13 +10,11 @@ function ideaSwiper(){
       spaceBetween: 30,
       centeredSlides: true,
       breakpoints:{
-        991:{
-          // slidesPerView:3,
-        
-          
-        },
         320:{
-          // slidesPerView:2,
+          slidesPerView:2,
+        },
+        991:{
+          slidesPerView:3,
         },
       }
            
@@ -25,4 +23,30 @@ function ideaSwiper(){
  
 ideaSwiper()
 
-  // export default {ideaSwiper}
+
+function teamSwiper(){
+  
+  const swiper = new Swiper('.swiper', {
+    modules:[Navigation],
+    navigation: {
+      nextEl: '.icon-button-next',
+      prevEl: '.icon-button-prev',
+    },
+    breakpoints:{
+      320:{
+        slidesPerView:2,
+        spaceBetween:10,
+
+      },
+      525:{
+        slidesPerView:3
+      },
+      769:{
+        slidesPerView:2
+      },
+    }
+
+  });
+}
+
+teamSwiper()

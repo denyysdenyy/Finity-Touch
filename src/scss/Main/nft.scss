@@ -1,0 +1,77 @@
+.nft {
+
+    // .nft__container
+
+    &__container {
+        @media(max-width:1439px){
+            flex-direction: column;
+        }
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo{
+        @media(max-width:991px){
+            max-width: 375px;
+            width: 100%;
+        }
+    }
+
+   
+
+    // .nft__discription
+
+    &__discription {
+        @media(max-width:991px){
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+
+    // .nft__title
+
+    &__title {
+    }
+
+    // .nft__title-first-span
+
+    &__title-first-span {
+    }
+
+    // .nft__title-second-span
+
+    &__title-second-span {
+    }
+
+    // .nft__subtitle
+
+    &__subtitle {
+        @media(max-width:991px){
+            font-size: 13px;
+            line-height: 16px;
+            max-width: 298px;
+            width: 100%;
+          }
+    }
+
+    // .nft__decor
+
+    &__decor {
+    }
+    
+
+    // .nft__btn
+
+    &__btn {
+    }
+
+    // .nft__lines
+    
+    &__lines{
+        &::after{
+            content: 'PRODUCT 03';
+        }
+    }
+}
+

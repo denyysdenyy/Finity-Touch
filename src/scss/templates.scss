@@ -49,6 +49,7 @@
     // .button__buy
 
     &__buy {
+        align-self: center;
         border: unset;
         padding: 18px 45px;
         background: linear-gradient(90deg, rgba(84,214,255,1) 13%, rgba(194,117,255,1) 56%, rgba(243,106,255,1) 92%);
@@ -57,6 +58,7 @@
             font-size: 15.6px;
             padding: 19px;
             max-width: 145px;
+            
         }
         &::before{
             border-radius: inherit;
@@ -109,6 +111,11 @@
     letter-spacing: -0.02em;
     font-family: $fontChakra;
     margin-bottom: 25px;
+    @media(max-width:991px){
+        line-height: 39px;
+        font-size: 27px;
+        max-width: 258px;
+    }
 }
 .subtitle{
     font-weight: 500;
@@ -118,8 +125,12 @@
     margin-bottom: 51px;
 }
 .btn{
-    font-size: 27px;
-    line-height: 33px;
+    @media(max-width:991px){
+        font-size: 15px;
+        padding: 13px 20px;
+        width: 245px;
+        margin:  0 auto;
+    }
     border-radius: 60px 0px;
     position: relative;
     width: 300px;
@@ -129,6 +140,9 @@
     line-height: 33px;
     color: #ffffff;
     padding: 22px 20px;
+    svg{
+        margin-left: 12px;
+    }
     &:before {
         content: "";
         position: absolute;
@@ -145,22 +159,57 @@
   
 }
 .decor{
-    display: flex;
-    align-items: baseline;
-    gap: 7px;
-    &__lines{
-        height: 23px;
-        max-width: 300px;
-        width: 100%;
-        border-top: 3px dotted #fff;
-        padding: 0px;
-        border-bottom: 3px solid #fff;
+    @media(max-width:1799px){
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+      }
+    @media(max-width:991px){
+      flex-direction: column;
     }
+    margin-top: 23px;
+    display: flex;
+    align-items: end;
+   
     &__title{
+        position: relative;
         writing-mode: vertical-rl;
         text-orientation: mixed;
         font-weight: 400;
         font-size: 19px;
         font-family: $fontChakra;
+        max-width: 100px;
+        width: 100%;
+        height: 59px;
+        line-height: 130%;
+    }
+    &__lines{
+        max-width: 400px;
+        width: 100%;
+        height: 1px;
+        border-top: 2px dashed #fff;
+        border-bottom: 2px solid #fff;
+        padding: 12px 0;
+        position: relative;
+        &::after{
+            content: 'PRODUCT 01';
+            position: absolute;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            font-weight: 400;
+            font-size: 19px;
+            line-height: 180%;
+            font-family: $fontChakra;
+            right: -52px;
+            bottom: 22px;
+            @media(max-width:525px){
+                right: -15px;
+                font-size: 10px;
+            }
+        }
+    }
+    &__line{
+        
+
     }
 }
