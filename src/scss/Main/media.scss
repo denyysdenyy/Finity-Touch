@@ -1,0 +1,147 @@
+.media {
+
+		// .media__container
+
+		&__container {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+
+		// .media__title
+
+		&__title {
+            font-weight: 700;
+            font-size: 60px;
+            line-height: 78px;
+			margin-bottom: 106px;
+			@media(max-width:768px){
+				margin-bottom: 45px;
+				font-size: 21px;
+				line-height: 27px;
+			}
+
+		}
+
+		// .media__body
+		&__body{
+			max-width: 1235px;
+			width: 100%;
+			height: 768px;
+			position: relative;
+			background: url(../../img/Main-Page/Media/phone.svg) no-repeat center;
+			background-size:100%;
+			@media(max-width:425px){
+				height: 500px;
+			}
+		}
+		
+
+			// .media__discord
+	
+			&__discord {
+				left: 32%;
+				@media(max-width:1024px){
+					top: 5%;
+				}
+				@media(max-width:768px){
+					top: 12%;
+				}
+				@media(max-width:452px){
+					top: 25%;
+				}
+			}
+	
+			// .media__telegram
+	
+			&__telegram {
+				left: 25%;
+				top: 23%;
+				@media(max-width:1024px){
+					left: 26%;
+					top: 26%;
+				}
+				@media(max-width:768px){
+					top: 29%;
+				}
+				@media(max-width:425px){
+					top: 38%;
+					left: 23%;
+				}
+			}
+	
+			// .media__twitter
+	
+			&__twitter {
+				left: 63.8%;
+				top: 25.5%;
+				@media(max-width:1024px){
+					top: 29%;
+				}
+				@media(max-width:768px){
+					top: 33.5%;
+				}
+				@media(max-width:425px){
+					top: 40%;
+				}
+			}
+	
+			// .media__linkedin
+	
+			&__linkedin {
+				left: 52%;
+				bottom: 82%;
+				@media(max-width:768px){
+					top: 7%;
+				}
+				@media(max-width:425px){
+					top: 21%
+				}
+			}
+	
+			// .media__reddit
+	
+			&__reddit {
+				top: 21%;
+				left: 45%;
+				@media(max-width:1024px){
+					top: 26%;
+				}
+				@media(max-width:768px){
+					top: 29%;
+				}
+				@media(max-width:425px){
+					top: 36%;
+				}
+			}
+	
+			// .media__instagram
+	
+			&__instagram {
+				top: 51%;
+				left: 27%;
+			}
+			&__link{
+				position: absolute;
+				display: inline-block;
+				&:hover img {
+					transform: scale(120%);
+				}
+				
+				img{
+					transition: all .3s ease-in-out;
+
+					width: 202px;
+					@media(max-width:1024px){
+						width: 160px;
+					}
+					@media(max-width:768px){
+						width: 125px;
+					}
+					@media(max-width:425px){
+						width: 55px;
+					}
+				}
+			}
+
+}

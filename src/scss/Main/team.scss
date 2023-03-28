@@ -58,7 +58,7 @@
             }
         }
         @media(max-width:768px){
-            max-width: 130px;
+            max-width: 238px;
         }
     };
     &__card.hidden{
@@ -139,7 +139,7 @@
         transition: all .3s ease-in-out;
         @media(min-width:1280px){
             &:hover{
-                background-color: #91009D;
+                transform: scale(105%);
             }
         }
     }
@@ -147,11 +147,14 @@
 
     // ------------MOBILE-------------------
     &-mobile{
+
         display: none;
         @media(max-width:991px){
             display: block;
         }
         &__container{
+            text-align: -webkit-center;
+            position: relative;
             @media(max-width:991px){
                 padding: 0 50px;
             }
@@ -162,6 +165,59 @@
                 padding: 0 30px;
             }
         }
-    }
-}
 
+        // .team-mobile__buttons
+        &__buttons{
+           
+        }
+        &-button-prev,&-button-next{
+            position: absolute;
+            z-index: 3;
+            top: 45%;
+            left: 0;
+        }
+        &-button-prev{
+            @media(max-width:425px){
+                left: 2.7%;
+            }
+            @media(max-width:375px){
+                left: 1.7%;
+            }
+            left: 12.7%;
+            &::after{
+                content: "";
+                position: absolute;
+                background: url(../../img/Main-Page/Team/arrow-prev.svg) no-repeat;
+                width: 35px;
+                height: 35px;
+                z-index: 3;
+            
+            }
+        }
+        &-button-next{
+            @media(max-width:425px){
+                left: 91%;
+            }
+            @media(max-width:375px){
+                left: 92%;
+            }
+            left: 84%;
+            &::after{
+                content: "";
+                position: absolute;
+                background: url(../../img/Main-Page/Team/arrow-next.svg) no-repeat;
+                width: 35px;
+                height: 35px;
+                z-index: 3;
+            }
+           
+        }
+
+    }
+    
+
+
+}
+.swiper-button-disabled{
+    opacity: 0.4;
+}

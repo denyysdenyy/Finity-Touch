@@ -6,18 +6,13 @@ import Swiper, { Navigation, Pagination } from 'swiper';
 function ideaSwiper(){
   
     const swiper = new Swiper('.idea__cards-mobile', {
-      slidesPerView:'auto',
-      spaceBetween: 30,
       centeredSlides: true,
       breakpoints:{
         320:{
-          slidesPerView:2,
-        },
-        991:{
-          slidesPerView:3,
-        },
+          slidesPerView:1,
+          spaceBetween:51,
+        }
       }
-           
     });
 }
  
@@ -29,8 +24,8 @@ function teamSwiper(){
   const swiper = new Swiper('.swiper', {
     modules:[Navigation],
     navigation: {
-      nextEl: '.icon-button-next',
-      prevEl: '.icon-button-prev',
+      nextEl: '.team-mobile-button-next',
+      prevEl: '.team-mobile-button-prev',
     },
     breakpoints:{
       320:{

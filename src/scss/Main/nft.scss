@@ -37,11 +37,23 @@
     // .nft__title-first-span
 
     &__title-first-span {
+        background: linear-gradient(144.66deg, #FF6C56 6.96%, #FF9344 88.16%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        
     }
 
     // .nft__title-second-span
 
     &__title-second-span {
+        background: linear-gradient(144.66deg, #FF6C56 6.96%, #FF9344 88.16%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        
     }
 
     // .nft__subtitle
@@ -55,17 +67,8 @@
           }
     }
 
-    // .nft__decor
-
-    &__decor {
-    }
+  
     
-
-    // .nft__btn
-
-    &__btn {
-    }
-
     // .nft__lines
     
     &__lines{
@@ -73,5 +76,11 @@
             content: 'PRODUCT 03';
         }
     }
-}
 
+    // .nft__btn
+    &__btn{
+        &::before{
+            background: linear-gradient(31deg, #FF6C56 50%,#FF9344 50%);
+        }
+    }
+}

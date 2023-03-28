@@ -1,0 +1,105 @@
+.contact {
+    transition: all .3s ease-in-out;
+    overflow-y: scroll;
+    scroll-behavior: smooth;
+    @media(min-width: 991px){
+        background: url(../../img/Main-Page/Contact/Coin1-bg.png) no-repeat left top 161%, url(../../img/Main-Page/Contact/Coin2-bg.png) right 1% bottom -140% no-repeat;
+        background-size: 552px;
+    }
+
+    // .contact__container
+
+    &__container {
+        padding-top: 126px;
+        padding-bottom: 89px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+                    
+    }
+
+    // .contact__title
+
+    &__title {
+        font-weight: 700;
+        font-size: 50px;
+        line-height: 61px;
+        margin-bottom: 22px;
+    }
+
+    // .contact__form
+
+    &__form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    // .contact__form-input-name
+
+    &__form-input-name {
+    }
+
+    // .contact__form-input-email
+
+    &__form-input-email {
+    }
+
+    // .contact__form-input-message
+
+    &__form-input-message {
+    }
+
+    // .contact__form-btn
+
+    &__form-btn{
+        position: relative;
+        margin-top: 60px;
+        font-weight: 600;
+        font-size: 28px;
+        border-radius: 0px 60px;
+        padding: 17px;
+        background: none;
+        color: #fff;
+        transition: all .3s ease-in-out;
+        &:hover{
+          transform: scale(104.5%);
+        }
+        &::after{
+            content: "";
+            position: absolute;
+            inset: 0;
+            border-radius: 0 60px;
+            border: 3px solid transparent;
+            color: #fff;
+            background: linear-gradient(148.71deg, #FC84FF 10.47%, #54D1FA 88.29%);
+            -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            
+        }
+    }
+
+    // .contact__form-input
+
+    &__form-input{
+        transition: all .3s ease-in-out;
+        max-width: 511px;
+        width: 100%;
+        background: none;
+        font-weight: 500;
+        font-size: 28px;
+        line-height: 34px;
+        color: #959595;
+        padding: 10px 40px 13px 10px;
+        border: 10px solid;
+        border-image-slice: 1;
+        border-width: 2px;
+        border-image-source: linear-gradient(to left, #FC84FF, #54D1FA);
+        border-left: 0;
+        border-right: 0;
+        border-top: 0;
+        &::placeholder{
+            color: #959595;
+        }
+    }
+}

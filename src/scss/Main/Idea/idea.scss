@@ -65,14 +65,14 @@
         }
         @media(min-width:1280px){
             &:hover{
-                box-shadow: 2px 2px 9px #98FF73;
+               transform: scale(1.1);
             }
         }
-        @media(max-width:425px){
-            gap: 5px;
-            padding: 15px 10px 8px 13px;
-            height: 219px;
-        }
+        // @media(max-width:425px){
+        //     gap: 5px;
+        //     padding: 15px 10px 8px 13px;
+        //     height: 219px;
+        // }
        
     }
 

@@ -76,6 +76,11 @@
             content: 'PRODUCT 02';
         }
     }
+    &__btn{
+        &::before{
+            background: linear-gradient(31deg, #54D6FF 50%, #C275FF 50%);
+        }
+    }
 }
 
     // ._container

@@ -1,0 +1,108 @@
+.footer {
+    @media(max-width:1280px){
+        padding-top: 16px;
+        border-top: 1px solid #ffff;
+    }
+    @media(min-width:1281px){
+        background: url(../img/Footer/footer_bg.png) no-repeat right;
+    }
+    padding-top: 57px;
+    padding-bottom: 35px;
+    border-bottom: 1px solid #ffff;
+    // .footer__body
+
+    .nav__buttons{
+        margin-left: auto;
+    }
+    &__nav{
+        display: flex;
+        margin-left: auto;
+        transition: all .4s ease-in-out;
+        align-items: baseline;
+        @media(max-width:1280px){
+           flex-direction: column;
+           align-items: center;
+           text-align: center;
+        }
+    }
+
+    &__body {
+        display: flex;
+        align-items: end;
+        margin-top: 68px;
+    }
+
+    // .footer__discription
+
+    &__discription {
+        font-weight: 500;
+        font-size: 17px;
+        line-height: 21px;
+        color: #959595;
+        max-width: 979px;
+        width: 100%;
+        margin-left: auto;
+        @media(max-width:1280px){
+            text-align-last: center;
+
+        }
+        @media(max-width:425px){
+            font-size: 9px;
+
+        }
+        
+    }
+    &__languages{
+        background: none;
+        color: #fff;
+        font-size: 22px;
+        transition: all .3s ease-in-out;
+        cursor: pointer;
+        margin-left: 40px;
+        @media(max-width:1280px){
+            display: none;
+        }
+    }
+    &__list{
+        display: flex;  
+        gap: 40px;
+        font-weight: 500;
+        padding: 10.5px 40px;
+        @media(max-width:1280px){
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 24px;
+        }
+    }
+    &__link {
+        font-size: 22px;
+        color: #fff;
+        transition: all .3s ease-in-out;
+    }
+    &__buttons{
+        margin-left: auto;
+        display: flex;
+        gap: 20px;
+        @media(max-width: 1280px){
+            margin-left: unset;
+            margin-bottom: 24px;
+        }
+    }
+    .logo {
+        display: none;
+        @media(min-width:1281px){
+            display: flex;
+            align-items: center;
+            font-family: $fontChakra;
+            font-size: 36px;
+            font-weight: 600;
+            gap: 11px ;
+            @media(max-width:768px){
+                font-size: 27px;
+                svg{
+                    width: 30px;
+                }
+            }
+        }
+    }
+}

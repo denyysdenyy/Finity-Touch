@@ -110,16 +110,18 @@
   //<ПОДКЛЮЧЕНИЕ ФАЙЛОВ СТИЛЕЙ СТРАНИЦ И ЭЛЕМЕНТОВ>==================================================================================================== 
    
   @import "header"; 
-//   @import "footer"; 
-//   @import "burger"; 
-@import "./Main/hero.scss";
-@import "./Main//Idea/idea.scss";
-@import "./Main//Idea/idea-mobile.scss";
-@import "./Main/grant.scss";
-@import "./Main/future.scss";
-@import "./Main/nft.scss";
-@import "./Main/team.scss";
-@import "./Main/questions.scss";
+  @import "footer"; 
+  @import "./Main/hero.scss";
+  @import "./Main//Idea/idea.scss";
+  @import "./Main//Idea/idea-mobile.scss";
+  @import "./Main/grant.scss";
+  @import "./Main/future.scss";
+  @import "./Main/nft.scss";
+  @import "./Main/team.scss";
+  @import "./Main/questions.scss";
+  @import "./Main/media.scss";
+  @import "./Main/contact.scss";
+
 
 
 
