@@ -1,0 +1,80 @@
+.fund-roadmap {
+position: relative;
+    // .fund-roadmap__container
+
+    &__container {
+        padding-top: 178px;
+    }
+
+    // .fund-roadmap__wrapper
+
+    &__wrapper {
+        text-align: center;
+    }
+
+    // .fund-roadmap-line
+
+    &-line{
+    }
+    &__cards{
+        display: flex;
+    }
+
+    // .fund-roadmap__card
+
+    &__card {
+        max-height: 212px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        max-width: 245px;
+        width: 100%;
+        box-shadow: 2px 2px 9px #009D2C;
+        padding: 50px 30px 22px 11px;
+        text-align: left;
+        border-radius: 40px;
+        &:nth-of-type(1){
+            left: 4%;
+            bottom: 109px;
+        }
+        &:nth-of-type(2){
+            left: 14.5%;
+            bottom: 288px;
+        }
+        &:nth-of-type(3){
+            left: 30%;
+            bottom: 110px;
+        }
+        &:nth-of-type(4){
+            color: #0D0D0D;
+            left: 36.4%;
+            bottom: 539px;
+            background: linear-gradient(148.71deg, #B2FF0F 10.47%, #76FFEF 88.29%);
+        }
+
+        &:nth-of-type(5){
+            color: #0D0D0D;
+            left: 21%;
+            background: linear-gradient(148.71deg, #B2FF0F 10.47%, #76FFEF 88.29%);
+        }
+    }
+
+    // .fund-roadmap__card-title
+
+    &__card-title {
+        font-family: $fontChakra;
+        font-weight: 700;
+        font-size: 33px;
+        line-height: 43px;
+    }
+
+    // .fund-roadmap__card-subtitle
+
+    &__card-subtitle {
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 22px;
+        
+    }
+}
