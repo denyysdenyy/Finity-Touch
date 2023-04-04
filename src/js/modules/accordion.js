@@ -12,17 +12,5 @@ function handleQuestionsAccordionClass(){
 }
 handleQuestionsAccordionClass()
 
-function handlerFundQuestionsAccordionClass(){
-    const accordion = document.getElementsByClassName('fund__accordion');
-    if(accordion){
-        for(let i = 0; i < accordion.length; i++){
-            accordion[i].addEventListener('click', function(){
-             this.classList.toggle('active')
-            });
-         }
-    }
-   
-}
-handlerFundQuestionsAccordionClass()
 
 

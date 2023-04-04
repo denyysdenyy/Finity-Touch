@@ -1,0 +1,104 @@
+.fund-today {
+    position: relative;
+    // .fund-today__container
+
+    &__container {
+        
+    }
+
+    // .fund-today__content
+
+    &__content {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: 108px;
+        margin: 0 auto;
+        max-width: 898px;
+        padding: 50px 60px 50px 41px;
+        background:
+        linear-gradient(to right, #fff 4px, transparent 4px) 0 100%,
+        linear-gradient(to left, #fff 4px, transparent 4px) 100% 0,
+        linear-gradient(to bottom, #fff 4px, transparent 4px) 100% 0,
+        linear-gradient(to top, #fff 4px, transparent 4px) 0 100%;
+        background-repeat: no-repeat;
+        background-size: 70px 70px;
+        margin-bottom: 70px;
+    }
+}
+
+
+.fund-today__btns{
+    justify-content: center;
+    display: flex;
+    gap:28px;   
+}
+.fund-today-title {
+    @media(max-width:1281px){
+        display: none;
+    }
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 61px;
+}
+.fund-today-btn {
+    padding: 20px 60px;
+    position: relative;
+    font-weight: 600;
+    font-size: 33.0512px;
+    line-height: 40px;
+    @media(max-width:1281px){
+        padding: 12px 20px;
+        font-size: 18px;
+    }
+    &:hover{
+        transform: scale(104.5%);
+      }
+    &::after{
+        content: "";
+        position: absolute;
+        inset: 0;
+        border-radius: 0 60px;
+        border: 3px solid transparent;
+        color: #fff;
+        background: linear-gradient(148.71deg, #FC84FF 10.47%, #54D1FA 88.29%);
+        -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+        -webkit-mask-composite: xor;
+        
+    }
+}
+.fund-today__links{
+    display: flex;
+    justify-content: center;
+    gap: 86px;
+    font-size: 50px;
+    @media(min-width:1280px){
+        a:hover{
+              &::before{
+               transition: all .3s ease-in-out;
+               color: #B2FF0F
+              }
+               
+           }
+    }
+    @media(max-width:1280px){
+        font-size: 40px;
+    }
+        
+}
+.fund-today-bg{
+    @media(max-width: 1280px){
+        display: none;
+    }
+    position: absolute;
+    &-1{
+        bottom: -47%;
+        left: -10%;
+    }
+    &-2{
+        bottom: -30%;
+        right: -9%;
+
+    }
+}
+

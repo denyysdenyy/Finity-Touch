@@ -10,6 +10,76 @@ section {
   margin-bottom: 100px;
 }
 
+@font-face {
+  font-family: "links";
+  src: url("fonts/links.eot?uyvy2d");
+  src: url("../fonts/links.eot") format("embedded-opentype"), url("../fonts/links.ttf") format("truetype"), url("../fonts/links.woff") format("woff"), url("../fonts/links.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+[class^=icon-], [class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "links" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-discord:before {
+  content: "\e900";
+  color: #fff;
+  width: 50px;
+  height: 50px;
+}
+@media (max-width: 1280px) {
+  .icon-discord:before {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+.icon-instagram:before {
+  content: "\e901";
+  color: #fff;
+  width: 50px;
+  height: 50px;
+}
+
+.icon-linkedin:before {
+  content: "\e902";
+  color: #fff;
+  width: 50px;
+  height: 50px;
+}
+
+.icon-reddit:before {
+  content: "\e903";
+  color: #fff;
+  width: 50px;
+  height: 50px;
+}
+
+.icon-telegram:before {
+  content: "\e904";
+  color: #fff;
+  width: 50px;
+  height: 50px;
+}
+
+.icon-twitter:before {
+  content: "\e905";
+  color: #fff;
+  width: 50px;
+  height: 50px;
+}
+
 * {
   padding: 0px;
   margin: 0px;
@@ -53,6 +123,15 @@ body {
   -ms-text-size-adjust: 100%;
   -moz-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
+}
+
+img {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
 }
 
 input::-ms-clear {
@@ -235,12 +314,6 @@ body._lock {
   background: linear-gradient(to right, #fff 4px, transparent 4px) 0 100%, linear-gradient(to left, #fff 4px, transparent 4px) 100% 0, linear-gradient(to bottom, #fff 4px, transparent 4px) 100% 0, linear-gradient(to top, #fff 4px, transparent 4px) 0 100%;
   background-repeat: no-repeat;
   background-size: 70px 70px;
-}
-.discription::before {
-  content: "";
-}
-.discription::after {
-  content: "";
 }
 
 .title {
@@ -2040,6 +2113,103 @@ body._lock {
 .fund-accordion {
   box-shadow: 2px 2px 20px rgba(85, 255, 57, 0.5);
   border-radius: 10px;
+}
+
+.fund-today {
+  position: relative;
+}
+.fund-today__content {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 108px;
+  margin: 0 auto;
+  max-width: 898px;
+  padding: 50px 60px 50px 41px;
+  background: linear-gradient(to right, #fff 4px, transparent 4px) 0 100%, linear-gradient(to left, #fff 4px, transparent 4px) 100% 0, linear-gradient(to bottom, #fff 4px, transparent 4px) 100% 0, linear-gradient(to top, #fff 4px, transparent 4px) 0 100%;
+  background-repeat: no-repeat;
+  background-size: 70px 70px;
+  margin-bottom: 70px;
+}
+
+.fund-today__btns {
+  justify-content: center;
+  display: flex;
+  gap: 28px;
+}
+
+.fund-today-title {
+  font-weight: 700;
+  font-size: 50px;
+  line-height: 61px;
+}
+@media (max-width: 1281px) {
+  .fund-today-title {
+    display: none;
+  }
+}
+
+.fund-today-btn {
+  padding: 20px 60px;
+  position: relative;
+  font-weight: 600;
+  font-size: 33.0512px;
+  line-height: 40px;
+}
+@media (max-width: 1281px) {
+  .fund-today-btn {
+    padding: 12px 20px;
+    font-size: 18px;
+  }
+}
+.fund-today-btn:hover {
+  transform: scale(104.5%);
+}
+.fund-today-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 0 60px;
+  border: 3px solid transparent;
+  color: #fff;
+  background: linear-gradient(148.71deg, #FC84FF 10.47%, #54D1FA 88.29%);
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+}
+
+.fund-today__links {
+  display: flex;
+  justify-content: center;
+  gap: 86px;
+  font-size: 50px;
+}
+@media (min-width: 1280px) {
+  .fund-today__links a:hover::before {
+    transition: all 0.3s ease-in-out;
+    color: #B2FF0F;
+  }
+}
+@media (max-width: 1280px) {
+  .fund-today__links {
+    font-size: 40px;
+  }
+}
+
+.fund-today-bg {
+  position: absolute;
+}
+@media (max-width: 1280px) {
+  .fund-today-bg {
+    display: none;
+  }
+}
+.fund-today-bg-1 {
+  bottom: -47%;
+  left: -10%;
+}
+.fund-today-bg-2 {
+  bottom: -30%;
+  right: -9%;
 }
 
 .page {

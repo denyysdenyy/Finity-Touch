@@ -100,15 +100,8 @@
     linear-gradient(to left, #fff 4px, transparent 4px) 100% 0,
     linear-gradient(to bottom, #fff 4px, transparent 4px) 100% 0,
     linear-gradient(to top, #fff 4px, transparent 4px) 0 100%;
-
-  background-repeat: no-repeat;
-  background-size: 70px 70px;
-    &::before{
-        content: '';
-    }
-    &::after{
-        content: '';
-    }
+    background-repeat: no-repeat;
+    background-size: 70px 70px;
 }
 
 .title{
