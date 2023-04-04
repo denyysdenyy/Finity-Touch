@@ -1,9 +1,24 @@
 .fund-roadmap {
-position: relative;
-    // .fund-roadmap__container
+    position: relative;
+
+    // .fund-roadmap__container 
 
     &__container {
         padding-top: 178px;
+        @media(max-width:1279px){
+            padding-top: 70px;
+        }
+    }
+    // .fund-roadmap-bg
+
+    &-bg{
+        position: absolute;
+        left: -22%;
+        top: -54%;
+        @media(max-width:1279px){
+            display: none;
+        }
+  
     }
 
     // .fund-roadmap__wrapper
@@ -15,9 +30,16 @@ position: relative;
     // .fund-roadmap-line
 
     &-line{
+        @media(max-width:1279px){
+            display: none;
+        }
     }
     &__cards{
         display: flex;
+        @media(max-width:1279px){
+            flex-direction: column;
+            align-items: center;
+        }
     }
 
     // .fund-roadmap__card
@@ -34,29 +56,75 @@ position: relative;
         padding: 50px 30px 22px 11px;
         text-align: left;
         border-radius: 40px;
-        &:nth-of-type(1){
-            left: 4%;
-            bottom: 109px;
+        margin-bottom: 39px;
+        @media(max-width:991px){
+            max-height: 144px;
         }
-        &:nth-of-type(2){
-            left: 14.5%;
-            bottom: 288px;
-        }
-        &:nth-of-type(3){
-            left: 30%;
-            bottom: 110px;
-        }
-        &:nth-of-type(4){
-            color: #0D0D0D;
-            left: 36.4%;
-            bottom: 539px;
-            background: linear-gradient(148.71deg, #B2FF0F 10.47%, #76FFEF 88.29%);
+        @media(max-width:1279px){
+            padding: 20px 44px 20px 18px;
+            &:after{
+                content: url(../../img/Fund/Fund-roadmap/triangle-down.svg);
+                position: absolute;
+                top: 108%;
+                left: 38%;
+               
+            }
+            
         }
 
-        &:nth-of-type(5){
-            color: #0D0D0D;
-            left: 21%;
+        @media(min-width:1280px){
+            &:nth-of-type(1){
+                left: 4%;
+                bottom: 109px;
+            }
+            &:nth-of-type(2){
+                @media(max-width:1440px){
+                    left: 11.5%;
+                }
+                left: 14.5%;
+                bottom: 288px;
+            }
+            &:nth-of-type(3){
+                @media(max-width:1440px){
+                    left: 27%
+                }
+                left: 30%;
+                bottom: 110px;
+            }
+            &:nth-of-type(4){
+                @media(max-width:1440px){
+                    left: 30%;
+                }
+                color: #0D0D0D;
+                left: 36.4%;
+                bottom: 539px;
+            }
+    
+            &:nth-of-type(5){
+                @media(max-width:1440px){
+                    left: 12.7%;
+                }
+                color: #0D0D0D;
+                left: 21%;
+            }
+            
+        }
+        @media(max-width: 1279px){
+            &:nth-of-type(4),&:nth-of-type(5){
+               margin-bottom: unset;
+               &::after{
+                content: unset;
+               }
+            }
+            &:nth-of-type(4){
+                margin-bottom: 8px;
+            }
+        }
+
+
+        &:nth-of-type(4),&:nth-of-type(5){
             background: linear-gradient(148.71deg, #B2FF0F 10.47%, #76FFEF 88.29%);
+            color: #0D0D0D;
         }
     }
 
@@ -67,6 +135,9 @@ position: relative;
         font-weight: 700;
         font-size: 33px;
         line-height: 43px;
+        @media(max-width:991px){
+            font-size: 25px;
+        }
     }
 
     // .fund-roadmap__card-subtitle
@@ -75,6 +146,22 @@ position: relative;
         font-weight: 500;
         font-size: 18px;
         line-height: 22px;
+        @media(max-width:1279px){
+            font-size: 13px;
+            line-height: 16px;
+        }
         
     }
+
+
+    &-bg,&-line{
+        -webkit-touch-callout: none; /* iOS Safari */
+        -webkit-user-select: none; /* Safari */
+        -khtml-user-select: none; /* Konqueror HTML */
+        -moz-user-select: none; /* Old versions of Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+        user-select: none; 
+    }
+
 }
+

@@ -377,7 +377,7 @@ body._lock {
     flex-direction: column;
     background: #171717;
     z-index: 3;
-    max-width: 600px;
+    max-width: 333px;
     width: 100%;
     height: 100%;
     margin: 0;
@@ -1872,11 +1872,37 @@ body._lock {
 .fund-roadmap__container {
   padding-top: 178px;
 }
+@media (max-width: 1279px) {
+  .fund-roadmap__container {
+    padding-top: 70px;
+  }
+}
+.fund-roadmap-bg {
+  position: absolute;
+  left: -22%;
+  top: -54%;
+}
+@media (max-width: 1279px) {
+  .fund-roadmap-bg {
+    display: none;
+  }
+}
 .fund-roadmap__wrapper {
   text-align: center;
 }
+@media (max-width: 1279px) {
+  .fund-roadmap-line {
+    display: none;
+  }
+}
 .fund-roadmap__cards {
   display: flex;
+}
+@media (max-width: 1279px) {
+  .fund-roadmap__cards {
+    flex-direction: column;
+    align-items: center;
+  }
 }
 .fund-roadmap__card {
   max-height: 212px;
@@ -1890,29 +1916,87 @@ body._lock {
   padding: 50px 30px 22px 11px;
   text-align: left;
   border-radius: 40px;
+  margin-bottom: 39px;
 }
-.fund-roadmap__card:nth-of-type(1) {
-  left: 4%;
-  bottom: 109px;
+@media (max-width: 991px) {
+  .fund-roadmap__card {
+    max-height: 144px;
+  }
 }
-.fund-roadmap__card:nth-of-type(2) {
-  left: 14.5%;
-  bottom: 288px;
+@media (max-width: 1279px) {
+  .fund-roadmap__card {
+    padding: 20px 44px 20px 18px;
+  }
+  .fund-roadmap__card:after {
+    content: url(../../img/Fund/Fund-roadmap/triangle-down.svg);
+    position: absolute;
+    top: 108%;
+    left: 38%;
+  }
 }
-.fund-roadmap__card:nth-of-type(3) {
-  left: 30%;
-  bottom: 110px;
+@media (min-width: 1280px) {
+  .fund-roadmap__card:nth-of-type(1) {
+    left: 4%;
+    bottom: 109px;
+  }
+  .fund-roadmap__card:nth-of-type(2) {
+    left: 14.5%;
+    bottom: 288px;
+  }
 }
-.fund-roadmap__card:nth-of-type(4) {
-  color: #0D0D0D;
-  left: 36.4%;
-  bottom: 539px;
+@media (min-width: 1280px) and (max-width: 1440px) {
+  .fund-roadmap__card:nth-of-type(2) {
+    left: 11.5%;
+  }
+}
+@media (min-width: 1280px) {
+  .fund-roadmap__card:nth-of-type(3) {
+    left: 30%;
+    bottom: 110px;
+  }
+}
+@media (min-width: 1280px) and (max-width: 1440px) {
+  .fund-roadmap__card:nth-of-type(3) {
+    left: 27%;
+  }
+}
+@media (min-width: 1280px) {
+  .fund-roadmap__card:nth-of-type(4) {
+    color: #0D0D0D;
+    left: 36.4%;
+    bottom: 539px;
+  }
+}
+@media (min-width: 1280px) and (max-width: 1440px) {
+  .fund-roadmap__card:nth-of-type(4) {
+    left: 30%;
+  }
+}
+@media (min-width: 1280px) {
+  .fund-roadmap__card:nth-of-type(5) {
+    color: #0D0D0D;
+    left: 21%;
+  }
+}
+@media (min-width: 1280px) and (max-width: 1440px) {
+  .fund-roadmap__card:nth-of-type(5) {
+    left: 12.7%;
+  }
+}
+@media (max-width: 1279px) {
+  .fund-roadmap__card:nth-of-type(4), .fund-roadmap__card:nth-of-type(5) {
+    margin-bottom: unset;
+  }
+  .fund-roadmap__card:nth-of-type(4)::after, .fund-roadmap__card:nth-of-type(5)::after {
+    content: unset;
+  }
+  .fund-roadmap__card:nth-of-type(4) {
+    margin-bottom: 8px;
+  }
+}
+.fund-roadmap__card:nth-of-type(4), .fund-roadmap__card:nth-of-type(5) {
   background: linear-gradient(148.71deg, #B2FF0F 10.47%, #76FFEF 88.29%);
-}
-.fund-roadmap__card:nth-of-type(5) {
   color: #0D0D0D;
-  left: 21%;
-  background: linear-gradient(148.71deg, #B2FF0F 10.47%, #76FFEF 88.29%);
 }
 .fund-roadmap__card-title {
   font-family: "Chakra Petch", sans-serif;
@@ -1920,10 +2004,29 @@ body._lock {
   font-size: 33px;
   line-height: 43px;
 }
+@media (max-width: 991px) {
+  .fund-roadmap__card-title {
+    font-size: 25px;
+  }
+}
 .fund-roadmap__card-subtitle {
   font-weight: 500;
   font-size: 18px;
   line-height: 22px;
+}
+@media (max-width: 1279px) {
+  .fund-roadmap__card-subtitle {
+    font-size: 13px;
+    line-height: 16px;
+  }
+}
+.fund-roadmap-bg, .fund-roadmap-line {
+  -webkit-touch-callout: none; /* iOS Safari */
+  -webkit-user-select: none; /* Safari */
+  -khtml-user-select: none; /* Konqueror HTML */
+  -moz-user-select: none; /* Old versions of Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none;
 }
 
 .page {
