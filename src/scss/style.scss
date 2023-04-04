@@ -3,11 +3,8 @@
 .main { 
 	min-height: calc(100vh - 513px); 
 	flex: 1 1 auto; 
-	margin-top: 60px; 
    
-	@media (max-width: 1200px) { 
-	  margin-top: 80px; 
-	} 
+	
   } 
    
   section { 
@@ -121,6 +118,9 @@
   @import "./Main/questions.scss";
   @import "./Main/media.scss";
   @import "./Main/contact.scss";
+  // FUND
+  @import "./Fund/fund-hero.scss";
+
 
 
 

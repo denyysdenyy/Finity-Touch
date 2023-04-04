@@ -6,6 +6,7 @@ import Swiper, { Navigation, Pagination } from 'swiper';
 function ideaSwiper(){
   
     const swiper = new Swiper('.idea__cards-mobile', {
+      loop:false,
       centeredSlides: true,
       breakpoints:{
         320:{
@@ -45,3 +46,24 @@ function teamSwiper(){
 }
 
 teamSwiper()
+
+  
+function cardSwiper(){
+  
+  const swiper = new Swiper('.cards-mobile__swiper', {
+
+    breakpoints:{
+      320:{
+        slidesPerView:1,
+        spaceBetween:51,
+        centeredSlides: true,
+      },
+      768:{
+        slidesPerView:2,
+      }
+    }
+  });
+}
+
+cardSwiper()
+

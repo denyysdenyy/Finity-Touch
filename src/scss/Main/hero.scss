@@ -11,8 +11,9 @@
         display: flex;
         flex-direction: column;
         gap: 40px;
-        align-items: center;
+        align-items: flex-start;
         @media(max-width:991px){
+            align-items: center;
             text-align: center;
              gap: 11px;
         }
@@ -21,6 +22,7 @@
     // .hero__title
 
     &__title {
+        font-family: $fontChakra;
         font-weight: 600;
         font-size: 147px;
         background: linear-gradient(103.59deg, #54D6FF 13.23%, #C275FF 56.28%, #F36AFF 91.95%);

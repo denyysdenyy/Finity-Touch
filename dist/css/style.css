@@ -4,12 +4,6 @@
 .main {
   min-height: calc(100vh - 513px);
   flex: 1 1 auto;
-  margin-top: 60px;
-}
-@media (max-width: 1200px) {
-  .main {
-    margin-top: 80px;
-  }
 }
 
 section {
@@ -150,6 +144,7 @@ body._lock {
 }
 
 .button {
+  font-size: 22px;
   white-space: nowrap;
   padding: 18px 35px;
   border: 2px solid #FFFFFF;
@@ -524,6 +519,95 @@ body._lock {
   }
 }
 
+.cards {
+  position: relative;
+  top: -117px;
+  display: none;
+}
+@media (min-width: 992px) {
+  .cards {
+    display: block;
+  }
+}
+.cards__container {
+  display: flex;
+  gap: 40px;
+  cursor: default;
+  justify-content: center;
+  position: relative;
+  top: -19px;
+}
+.cards__card {
+  background: linear-gradient(#0D0D0D, #0D0D0D) padding-box, linear-gradient(45deg, #B2FF0F, #76FFEF) border-box;
+  box-shadow: 2px 2px 9px #169D00;
+  max-width: 480px;
+  width: 100%;
+  border-radius: 60px;
+  transition: all 0.3s ease-in-out;
+}
+@media (max-width: 991px) {
+  .cards__card {
+    max-width: 305px;
+  }
+}
+@media (min-width: 1280px) {
+  .cards__card:hover {
+    transform: scale(1.1);
+  }
+}
+.cards__card-wrapper {
+  padding: 36px 26px 20px 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.cards__card-logo {
+  margin-bottom: 15px;
+}
+@media (max-width: 991px) {
+  .cards__card-logo {
+    width: 60px;
+  }
+}
+.cards__card-subtitle {
+  margin-bottom: 26px;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 21px;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+@media (max-width: 991px) {
+  .cards__card-subtitle {
+    font-size: 12px;
+    line-height: 15px;
+  }
+}
+.cards__card-link {
+  background: linear-gradient(103.59deg, #86AFFE 13.23%, #A57AFF 53.2%, #FB84FF 91.95%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 27px;
+}
+@media (max-width: 991px) {
+  .cards__card-link {
+    font-size: 15px;
+  }
+}
+.cards-mobile {
+  display: none;
+}
+@media (max-width: 991px) {
+  .cards-mobile {
+    display: block;
+  }
+}
+
 .header {
   max-width: 1843px;
   width: 100%;
@@ -709,15 +793,17 @@ body._lock {
   display: flex;
   flex-direction: column;
   gap: 40px;
-  align-items: center;
+  align-items: flex-start;
 }
 @media (max-width: 991px) {
   .hero__body {
+    align-items: center;
     text-align: center;
     gap: 11px;
   }
 }
 .hero__title {
+  font-family: "Chakra Petch", sans-serif;
   font-weight: 600;
   font-size: 147px;
   background: linear-gradient(103.59deg, #54D6FF 13.23%, #C275FF 56.28%, #F36AFF 91.95%);
@@ -1636,6 +1722,77 @@ body._lock {
 }
 .contact__form-input::placeholder {
   color: #959595;
+}
+
+.fund-hero {
+  background: url(../../img/Fund/Fund-hero/fund-hero.png) no-repeat center;
+  background-position-y: 0%;
+  padding-top: 125px;
+  background-size: cover;
+}
+@media (min-width: 992px) {
+  .fund-hero {
+    background-position-x: 51px;
+    padding-bottom: 300px;
+  }
+}
+.fund-hero__container {
+  font-family: "Chakra Petch", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+@media (max-width: 991px) {
+  .fund-hero__container {
+    align-items: center;
+    padding-top: 289px;
+    text-align: center;
+  }
+}
+.fund-hero__title {
+  background: linear-gradient(148.71deg, #B2FF0F 10.47%, #76FFEF 88.29%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-weight: 600;
+  font-size: 120px;
+  line-height: 100px;
+  /* identical to box height, or 83% */
+  max-width: 460px;
+  width: 100%;
+  margin-bottom: 21px;
+}
+@media (max-width: 991px) {
+  .fund-hero__title {
+    font-size: 60px;
+    max-width: 210px;
+    line-height: unset;
+  }
+}
+.fund-hero__title-down {
+  text-align: end;
+}
+.fund-hero__subtitle {
+  max-width: 465px;
+  width: 100%;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 29px;
+  margin-bottom: 45px;
+}
+@media (max-width: 991px) {
+  .fund-hero__subtitle {
+    font-size: 18px;
+  }
+}
+.fund-hero__button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  padding: 18px 40px;
+  max-width: 260px;
+  width: 100%;
 }
 
 .page {
