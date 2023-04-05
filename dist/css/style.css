@@ -2323,6 +2323,59 @@ body._lock {
   box-shadow: 2px 2px 9px #91009D;
 }
 
+.token-diagram {
+  position: relative;
+}
+.token-diagram-bg-1, .token-diagram-bg-2 {
+  position: absolute;
+}
+.token-diagram-bg-1 {
+  right: 61%;
+  bottom: -6%;
+}
+.token-diagram-bg-2 {
+  right: -35%;
+}
+.token-diagram__container {
+  text-align: center;
+}
+.token-diagram-title {
+  font-weight: 600;
+  font-size: 69px;
+  line-height: 84px;
+}
+@media (max-width: 991px) {
+  .token-diagram-title {
+    font-size: 30px;
+  }
+}
+.token-diagram-title span {
+  background: linear-gradient(117.47deg, #86AFFE 7.39%, #A57AFF 23.36%, #FB84FF 38.85%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.token-diagram-subtitle {
+  font-weight: 500;
+  font-size: 25px;
+  line-height: 155%;
+  margin-bottom: 66px;
+}
+@media (max-width: 991px) {
+  .token-diagram-subtitle {
+    font-size: 12px;
+    max-width: 299px;
+    margin: 0 auto;
+    margin-bottom: 38px;
+  }
+}
+@media (max-width: 991px) {
+  .token-diagram-logo {
+    max-width: 313px;
+  }
+}
+
 .page {
   flex: 1 1 auto;
 }

@@ -1,0 +1,52 @@
+.token-diagram {
+    position: relative;
+    &-bg{
+        &-1,&-2{
+            position: absolute;
+        }
+        &-1{
+            right: 61%;
+            bottom: -6%;
+        }
+        &-2{
+            right: -35%;
+        }
+    }
+
+    &__container {
+        text-align: center;
+    }
+    &-title{
+        font-weight: 600;
+        font-size: 69px;
+        line-height: 84px;
+        @media(max-width:991px){
+            font-size: 30px;
+        }
+        span{
+            background: linear-gradient(117.47deg, #86AFFE 7.39%, #A57AFF 23.36%, #FB84FF 38.85%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+    }
+    &-subtitle{
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 155%;
+        margin-bottom: 66px;
+        @media(max-width:991px){
+            font-size: 12px;
+            max-width: 299px;
+            margin: 0 auto;
+            margin-bottom: 38px;
+
+        }
+    }
+    &-logo{
+        @media(max-width:991px){
+            max-width: 313px;
+        }
+    }
+}
