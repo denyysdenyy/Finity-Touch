@@ -84,6 +84,7 @@ section {
   padding: 0px;
   margin: 0px;
   border: 0px;
+  scroll-behavior: smooth;
 }
 
 *,
@@ -2182,6 +2183,7 @@ body._lock {
   justify-content: center;
   gap: 86px;
   font-size: 50px;
+  flex-wrap: wrap;
 }
 @media (min-width: 1280px) {
   .fund-today__links a:hover::before {
