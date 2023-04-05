@@ -682,6 +682,77 @@ body._lock {
   }
 }
 
+.second-hero {
+  background: url(../../img/Fund/Fund-hero/fund-hero.png) no-repeat center;
+  background-position-y: 0%;
+  padding-top: 125px;
+  background-size: cover;
+}
+@media (min-width: 992px) {
+  .second-hero {
+    background-position-x: 51px;
+    padding-bottom: 300px;
+  }
+}
+.second-hero__container {
+  font-family: "Chakra Petch", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+@media (max-width: 991px) {
+  .second-hero__container {
+    align-items: center;
+    padding-top: 289px;
+    text-align: center;
+  }
+}
+.second-hero__title {
+  background: linear-gradient(148.71deg, #B2FF0F 10.47%, #76FFEF 88.29%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+  font-weight: 600;
+  font-size: 120px;
+  line-height: 100px;
+  /* identical to box height, or 83% */
+  max-width: 460px;
+  width: 100%;
+  margin-bottom: 21px;
+}
+@media (max-width: 991px) {
+  .second-hero__title {
+    font-size: 60px;
+    max-width: 210px;
+    line-height: unset;
+  }
+}
+.second-hero__title-down {
+  text-align: end;
+}
+.second-hero__subtitle {
+  max-width: 465px;
+  width: 100%;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 29px;
+  margin-bottom: 45px;
+}
+@media (max-width: 991px) {
+  .second-hero__subtitle {
+    font-size: 18px;
+  }
+}
+.second-hero__button {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  padding: 18px 40px;
+  max-width: 260px;
+  width: 100%;
+}
+
 .header {
   max-width: 1843px;
   width: 100%;
@@ -690,6 +761,7 @@ body._lock {
   align-items: center;
   padding: 37px 0 37px 0;
   font-family: "Montserrat", sans-serif;
+  z-index: 5;
 }
 @media (max-width: 1280px) {
   .header {
@@ -2212,6 +2284,43 @@ body._lock {
 .fund-today-bg-2 {
   bottom: -30%;
   right: -9%;
+}
+
+.token-hero {
+  position: relative;
+  background: url(../../img/Token/Token-hero/token-hero-bg.png) no-repeat center;
+}
+.token-hero-bg-decor {
+  position: absolute;
+  top: -34%;
+  right: 0;
+  left: 52%;
+}
+.token-hero__title {
+  background: linear-gradient(103.59deg, #FC84FF 13.23%, #54D1FA 91.95%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.token-hero__subtitle {
+  max-width: 523px;
+}
+.token-hero__button:before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 60px 0;
+  border: 3px solid transparent;
+  color: #fff;
+  background: linear-gradient(148.71deg, #b2ff0f 10.47%, #76ffef 88.29%);
+  -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+}
+
+.token__card {
+  box-shadow: 2px 2px 9px #91009D;
 }
 
 .page {

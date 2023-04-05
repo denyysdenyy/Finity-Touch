@@ -108,6 +108,7 @@
    
   @import "header"; 
   @import "footer"; 
+  // MAIN
   @import "./Main/hero.scss";
   @import "./Main//Idea/idea.scss";
   @import "./Main//Idea/idea-mobile.scss";
@@ -124,6 +125,10 @@
   @import "./Fund/fund-roadmap.scss";
   @import "./Fund/fund-questions.scss";
   @import "./Fund/fund-today.scss";
+  // TOKEN
+  @import "./Token/token-hero.scss";
+  @import "./Token/token-cards.scss";
+
 
 
 
