@@ -1,0 +1,103 @@
+.token-roadmap {
+    &-mobile{}
+    padding-bottom: 160px;
+    // .token-roadmap__container
+
+    &__container {
+        text-align: center;
+        position: relative;
+    }
+
+    // .token-roadmap__title
+
+    &__title {
+        font-family: $fontChakra;
+        font-weight: 600;
+        font-size: 61px;
+        line-height: 79px;
+    }
+
+    // .token-roadmap__subtitle
+
+    &__subtitle {
+        font-weight: 500;
+        font-size: 25px;
+        line-height: 155%;
+        margin-bottom: 100px;
+    }
+
+    // .token-roadmap__body
+
+    &__body {
+    }
+
+    // .token-roadmap__cards
+
+    &__cards {
+    }
+    &__card{
+        position: absolute;
+        padding: 30px 0;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        font-weight: 500;
+        max-width: 637px;
+        width: 100%;
+        background: #0D0D0D;
+        box-shadow: 2px 2px 9px #91009D;
+        border-radius: 50px;
+        &:nth-of-type(1){
+            bottom: 72%;
+            left: 59%;
+        }
+        &:nth-of-type(2){
+            bottom: 56%;
+            left: -1%;
+        }
+        &:nth-of-type(3){
+            bottom: 40%;
+            right: -0.4%;
+        }
+        &:nth-of-type(4){
+            bottom: 24%;
+            left: -0.4%;
+        }
+        &:nth-of-type(5){
+            bottom: 2%;
+            right: 0.4%;
+        }
+        &:nth-of-type(6){
+            bottom: -16%;
+        }
+        
+    }
+    &__column{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 8px;
+        border-bottom: 2px solid #F09BBE;
+        width: 100%;
+        padding: 15px 0 20px 15px;
+        &:nth-of-type(3){
+            border-bottom: unset;
+        }
+
+    }
+    &-name{
+        font-family: $fontChakra;
+        font-weight: 500;
+        font-size: 37px;
+        line-height: 48px;
+        letter-spacing: 0.11em;
+    }
+    &-discription{
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+}
+
+.token-roadmap-line {
+}
