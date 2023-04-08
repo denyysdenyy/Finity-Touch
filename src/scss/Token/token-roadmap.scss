@@ -1,5 +1,8 @@
 .token-roadmap {
-    &-mobile{}
+    @media(min-width:1440px){
+        display: block;
+    }
+    display: none;
     padding-bottom: 160px;
     // .token-roadmap__container
 
@@ -96,7 +99,65 @@
         font-size: 24px;
         line-height: 29px;
     }
+    // MOBILE
 
+    &-mobile{
+        display: none;
+        @media(max-width:1440px){
+            display: block;
+        }
+        &__wrapper{}
+        &__decor{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            float: left;
+        }
+        &-line{
+            position: relative;
+                height: 156px;
+            width: 5px;
+            background: linear-gradient(103.59deg, #FC84FF 13.23%, #54D1FA 91.95%);
+            &::after{
+                content: "STEP 1";
+                writing-mode: vertical-rl;
+                position: absolute;
+                white-space: nowrap;
+                font-family: $fontChakra;
+                font-weight: 600;
+                font-size: 14px;
+                line-height: 18px;
+                letter-spacing: 0.11em;
+                left: 8px;
+                top: 11px;
+            }
+        }
+        &-circle{
+            position: relative;
+            width: 43px;
+            height: 43px;
+            border-radius: 50%;
+            transition: all .5s ease-in-out;
+             &::after{
+                content: "";
+                position: absolute;
+                inset: 0;
+                border-radius: 50%;
+                padding: 6px;
+                background: linear-gradient(45deg, #54D6FF, #F36AFF);
+                -webkit-mask: 
+                  linear-gradient(#fff 0 0) content-box, 
+                  linear-gradient(#fff 0 0);
+                -webkit-mask-composite: xor;
+                        mask-composite: exclude;
+                pointer-events: none;
+                transition: all .5s ease-in-out;
+             }
+        }
+        &-circle.active {
+            background: linear-gradient(45deg, #54D6FF, #F36AFF);
+        }
+    }
 }
 
 .token-roadmap-line {
