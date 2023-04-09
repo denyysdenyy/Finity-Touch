@@ -156,6 +156,8 @@
         }
         &-circle.active {
             background: linear-gradient(45deg, #54D6FF, #F36AFF);
+            transition: all .5s ease-in-out;
+
         }
     }
 }

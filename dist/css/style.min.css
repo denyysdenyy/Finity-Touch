@@ -2515,6 +2515,7 @@ body._lock {
 }
 .token-roadmap-mobile-circle.active {
   background: linear-gradient(45deg, #54D6FF, #F36AFF);
+  transition: all 0.5s ease-in-out;
 }
 
 .page {
