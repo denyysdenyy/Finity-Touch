@@ -2,6 +2,9 @@ import * as flsFunctions from "./modules/functions.js";
 
 flsFunctions.isWebp();
 
+import AOS from 'aos';
+AOS.init();
+
 
 import {teamSwiper} from "./modules/Swiper.js";
 import { setActive } from "./modules/burger.js";

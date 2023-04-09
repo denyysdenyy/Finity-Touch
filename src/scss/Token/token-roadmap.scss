@@ -32,12 +32,22 @@
     // .token-roadmap__body
 
     &__body {
+       
+    }
+    &-line{
+        display: none;
+        @media(min-width:1441px){
+            display: block;
+            margin: 0 auto;
+        }
     }
 
     // .token-roadmap__cards
 
     &__cards {
     }
+    
+    // .token-roadmap__card
     &__card{
         position: absolute;
         padding: 30px 0;
@@ -50,28 +60,30 @@
         background: #0D0D0D;
         box-shadow: 2px 2px 9px #91009D;
         border-radius: 50px;
-        &:nth-of-type(1){
-            bottom: 72%;
-            left: 59%;
-        }
-        &:nth-of-type(2){
-            bottom: 56%;
-            left: -1%;
-        }
-        &:nth-of-type(3){
-            bottom: 40%;
-            right: -0.4%;
-        }
-        &:nth-of-type(4){
-            bottom: 24%;
-            left: -0.4%;
-        }
-        &:nth-of-type(5){
-            bottom: 2%;
-            right: 0.4%;
-        }
-        &:nth-of-type(6){
-            bottom: -16%;
+        @media(min-width:1441px){
+            &:nth-of-type(1){
+                bottom: 72%;
+                left: 59%;
+            }
+            &:nth-of-type(2){
+                bottom: 56%;
+                left: -1%;
+            }
+            &:nth-of-type(3){
+                bottom: 40%;
+                right: -0.4%;
+            }
+            &:nth-of-type(4){
+                bottom: 24%;
+                left: -0.4%;
+            }
+            &:nth-of-type(5){
+                bottom: 2%;
+                right: 0.4%;
+            }
+            &:nth-of-type(6){
+                bottom: -16%;
+            }
         }
         
     }
@@ -103,10 +115,25 @@
 
     &-mobile{
         display: none;
+        .token-roadmap__card{
+            position: relative;
+        }
+        .token-roadmap__cards{
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+        }
         @media(max-width:1440px){
             display: block;
         }
-        &__wrapper{}
+        &__container{
+            text-align: center;
+        }
+        &__wrapper{
+            display: flex;
+            gap: 25px;
+            justify-content: center;
+        }
         &__decor{
             display: flex;
             flex-direction: column;
@@ -115,7 +142,7 @@
         }
         &-line{
             position: relative;
-                height: 156px;
+            height: 300px;
             width: 5px;
             background: linear-gradient(103.59deg, #FC84FF 13.23%, #54D1FA 91.95%);
             &::after{
@@ -137,14 +164,14 @@
             width: 43px;
             height: 43px;
             border-radius: 50%;
-            transition: all .5s ease-in-out;
+            transition: background-image 0.3s ease-in-out;  
              &::after{
                 content: "";
                 position: absolute;
                 inset: 0;
                 border-radius: 50%;
                 padding: 6px;
-                background: linear-gradient(45deg, #54D6FF, #F36AFF);
+                background-image: linear-gradient(45deg, #54D6FF, #F36AFF);
                 -webkit-mask: 
                   linear-gradient(#fff 0 0) content-box, 
                   linear-gradient(#fff 0 0);
@@ -154,13 +181,39 @@
                 transition: all .5s ease-in-out;
              }
         }
-        &-circle.active {
-            background: linear-gradient(45deg, #54D6FF, #F36AFF);
-            transition: all .5s ease-in-out;
+      
+        // АНИМАЦИЯ КРУГА
+        [data-aos="circle-animation"] {
+            transition-property: transform, opacity;
+            &.aos-animate {
+                background-image: linear-gradient(45deg, #54D6FF, #F36AFF);
+                transition: background-image 0.3s ease-in-out;
+                transition-property: transform, opacity;
+                 opacity: 1;
+            }
+    }
 
-        }
+        // АНИМАЦИЯ ЛИНИИ
+        [data-aos="line-animation"] {
+            transition-property: transform, opacity;
+            opacity: 0;
+        
+            &.aos-animate {
+                transition: all 0.3s ease-in-out;
+                transition-property: transform, opacity;
+                opacity: 1;
+                animation: lineDown  .8s ;
+             
+            }
     }
 }
 
-.token-roadmap-line {
+}
+@keyframes lineDown {
+    0%{
+        height: 0;
+    }
+    100%{
+        height: 300px;
+    }
 }
