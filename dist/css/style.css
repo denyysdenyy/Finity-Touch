@@ -2657,6 +2657,92 @@ body._lock {
   padding-top: 12px;
 }
 
-.page {
-  flex: 1 1 auto;
+.token-adress {
+  display: block;
+}
+@media (max-width: 1439px) {
+  .token-adress {
+    display: none;
+  }
+}
+.token-adress__container {
+  text-align: center;
+}
+.token-adress-title {
+  margin-bottom: 25px;
+  font-weight: 600;
+  font-size: 64px;
+  font-family: "Chakra Petch", sans-serif;
+}
+.token-adress-title span {
+  background: linear-gradient(116.77deg, #FC84FF 3.43%, #54D1FA 38.39%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+.token-adress-subtitle {
+  font-weight: 500;
+  font-size: 19px;
+  margin-bottom: 75px;
+}
+.token-adress__form-input {
+  max-width: 863px;
+  width: 100%;
+  border-radius: 50px;
+  border: 1px solid #fff;
+  background: none;
+  padding: 37px 0;
+  padding-left: 33px;
+  color: #ffffff;
+  font-weight: 400;
+  font-size: 20px;
+  position: relative;
+}
+.token-adress__form-button {
+  position: relative;
+  right: 200px;
+  top: 6px;
+  background: linear-gradient(103.59deg, #FC84FF 13.23%, #54D1FA 91.95%);
+  border-radius: 50px;
+  color: #fff;
+  width: 190px;
+  padding: 24px 46px;
+  font-weight: 600;
+  font-size: 20px;
+}
+.token-adress__form-button::before {
+  content: url(../../img/Token/Token-adress/Copy-icon.svg);
+  position: relative;
+  top: 6px;
+  right: 14px;
+}
+
+.copy {
+  background: #1E1E1E;
+  padding: 25px 0;
+  padding-left: 16px;
+  text-align: left;
+  font-weight: 500;
+  position: relative;
+  left: 88%;
+  max-width: 380px;
+  border-radius: 2%;
+  transform: translateY(215px);
+  opacity: 0;
+  overflow: hidden;
+  transition: all 0.4s ease-in-out;
+}
+.copy.show {
+  opacity: 1;
+  overflow: visible;
+  transform: translateY(0);
+}
+.copy-message {
+  font-size: 18px;
+  background: linear-gradient(103.59deg, #FC84FF 13.23%, #54D1FA 91.95%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
 }

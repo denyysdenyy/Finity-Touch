@@ -11,3 +11,5 @@ import { setActive } from "./modules/burger.js";
 import { ideaSwiper } from "./modules/Swiper.js";
 import { showCards } from "./modules/showcards.js";
 import {handleQuestionsAccordionClass} from "./modules/accordion.js"
+import {tokenHandler} from "./modules/formHandler.js"
+
