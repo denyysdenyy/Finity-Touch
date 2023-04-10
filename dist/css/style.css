@@ -2393,7 +2393,16 @@ body._lock {
   font-family: "Chakra Petch", sans-serif;
   font-weight: 600;
   font-size: 61px;
-  line-height: 79px;
+}
+@media (max-width: 991px) {
+  .token-roadmap__title {
+    font-size: 30px;
+  }
+}
+@media (max-width: 1440px) {
+  .token-roadmap__title {
+    margin-bottom: 42px;
+  }
 }
 .token-roadmap__subtitle {
   font-weight: 500;
@@ -2420,8 +2429,34 @@ body._lock {
   max-width: 637px;
   width: 100%;
   background: #0D0D0D;
-  box-shadow: 2px 2px 9px #91009D;
-  border-radius: 50px;
+  box-shadow: 0.790625px 0.790625px 3.55781px #91009D;
+  border-radius: 30px;
+  color: #FFF;
+  background: #000;
+  background-clip: padding-box; /* !important */
+  border: solid 0.79px transparent; /* !important */
+  border-radius: 1em;
+}
+.token-roadmap__card:nth-of-type(5) .token-roadmap__column:nth-of-type(3)::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: red;
+  margin-top: 10px;
+  background: linear-gradient(to right, #FFB78F, #DB73FF);
+  box-shadow: 0.790625px 0.790625px 3.55781px #91009D;
+}
+.token-roadmap__card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  margin: -0.79px; /* !important */
+  border-radius: inherit; /* !important e*/
+  background: linear-gradient(to right, #FFB78F, #DB73FF);
 }
 @media (min-width: 1441px) {
   .token-roadmap__card:nth-of-type(1) {
@@ -2448,28 +2483,61 @@ body._lock {
     bottom: -16%;
   }
 }
+@media (max-width: 768px) {
+  .token-roadmap__card {
+    max-width: 277px;
+    padding: 0;
+  }
+}
 .token-roadmap__column {
+  position: relative;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   gap: 8px;
-  border-bottom: 2px solid #F09BBE;
   width: 100%;
   padding: 15px 0 20px 15px;
 }
-.token-roadmap__column:nth-of-type(3) {
-  border-bottom: unset;
+.token-roadmap__column:nth-of-type(1)::after, .token-roadmap__column:nth-of-type(2)::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: red;
+  margin-top: 10px;
+  background: linear-gradient(to right, #FFB78F, #DB73FF);
+  box-shadow: 0.790625px 0.790625px 3.55781px #91009D;
+}
+.token-roadmap__column:nth-of-type(3), .token-roadmap__column:nth-of-type(4) {
+  padding-bottom: 7px;
+}
+@media (max-width: 768px) {
+  .token-roadmap__column {
+    gap: 2px;
+    padding: 0;
+  }
 }
 .token-roadmap-name {
   font-family: "Chakra Petch", sans-serif;
   font-weight: 500;
   font-size: 37px;
-  line-height: 48px;
   letter-spacing: 0.11em;
+}
+@media (max-width: 768px) {
+  .token-roadmap-name {
+    font-size: 15px;
+    margin-bottom: 2px;
+  }
 }
 .token-roadmap-discription {
   font-size: 24px;
   line-height: 29px;
+}
+@media (max-width: 768px) {
+  .token-roadmap-discription {
+    font-size: 11px;
+    line-height: 12px;
+    white-space: nowrap;
+  }
 }
 .token-roadmap-mobile {
   display: none;
@@ -2492,7 +2560,7 @@ body._lock {
 }
 .token-roadmap-mobile__wrapper {
   display: flex;
-  gap: 25px;
+  gap: 56px;
   justify-content: center;
 }
 .token-roadmap-mobile__decor {
@@ -2503,11 +2571,21 @@ body._lock {
 }
 .token-roadmap-mobile-line {
   position: relative;
-  height: 300px;
+  height: 550px;
   width: 5px;
   background: linear-gradient(103.59deg, #FC84FF 13.23%, #54D1FA 91.95%);
 }
-.token-roadmap-mobile-line::after {
+@media (max-width: 1024px) {
+  .token-roadmap-mobile-line {
+    height: 451px;
+  }
+}
+@media (max-width: 768px) {
+  .token-roadmap-mobile-line {
+    height: 200px;
+  }
+}
+.token-roadmap-mobile-line:after {
   content: "STEP 1";
   writing-mode: vertical-rl;
   position: absolute;
@@ -2565,9 +2643,20 @@ body._lock {
     height: 0;
   }
   100% {
-    height: 300px;
+    @media (max-width: 1024px) {
+      height: 451px;
+    }
+    @media (max-width: 768px) {
+      height: 200px;
+    }
   }
 }
+.column__wrapper {
+  text-align: initial;
+  margin-left: 10px;
+  padding-top: 12px;
+}
+
 .page {
   flex: 1 1 auto;
 }

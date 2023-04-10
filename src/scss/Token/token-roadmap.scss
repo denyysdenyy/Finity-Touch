@@ -5,19 +5,21 @@
     display: none;
     padding-bottom: 160px;
     // .token-roadmap__container
-
     &__container {
         text-align: center;
         position: relative;
     }
-
     // .token-roadmap__title
-
     &__title {
         font-family: $fontChakra;
         font-weight: 600;
         font-size: 61px;
-        line-height: 79px;
+        @media(max-width:991px){
+            font-size: 30px;
+        }
+        @media(max-width: 1440px){
+            margin-bottom: 42px;
+        }
     }
 
     // .token-roadmap__subtitle
@@ -30,10 +32,9 @@
     }
 
     // .token-roadmap__body
-
     &__body {
-       
     }
+     // .token-roadmap__line
     &-line{
         display: none;
         @media(min-width:1441px){
@@ -41,12 +42,10 @@
             margin: 0 auto;
         }
     }
-
     // .token-roadmap__cards
 
     &__cards {
     }
-    
     // .token-roadmap__card
     &__card{
         position: absolute;
@@ -58,8 +57,38 @@
         max-width: 637px;
         width: 100%;
         background: #0D0D0D;
-        box-shadow: 2px 2px 9px #91009D;
-        border-radius: 50px;
+        box-shadow: 0.790625px 0.790625px 3.55781px #91009D;
+        border-radius: 30px;
+        $border: 0.79px;
+        color: #FFF;
+        background: #000;
+        background-clip: padding-box; /* !important */
+        border: solid $border transparent; /* !important */
+        border-radius: 1em;
+        &:nth-of-type(5){
+            .token-roadmap__column{
+                &:nth-of-type(3){
+                    &::after{
+                        content: '';
+                        width: 100%;
+                        height: 1px;
+                        background: red;
+                        margin-top: 10px;
+                        background: linear-gradient(to right, #FFB78F, #DB73FF);
+                        box-shadow: 0.790625px 0.790625px 3.55781px #91009D;
+                    }
+                }
+            }
+        }
+        &::after{
+            content: '';
+            position: absolute;
+            top: 0; right: 0; bottom: 0; left: 0;
+            z-index: -1;
+            margin: -$border; /* !important */
+            border-radius: inherit; /* !important e*/
+            background: linear-gradient(to right, #FFB78F, #DB73FF);
+        }
         @media(min-width:1441px){
             &:nth-of-type(1){
                 bottom: 72%;
@@ -85,34 +114,61 @@
                 bottom: -16%;
             }
         }
-        
+        @media(max-width:768px){
+            max-width: 277px;
+            padding: 0;
+        }
     }
+    // .token-roadmap__column 
     &__column{
+        position: relative;
         display: flex;
         flex-direction: column;
         align-items: flex-start;
         gap: 8px;
-        border-bottom: 2px solid #F09BBE;
         width: 100%;
         padding: 15px 0 20px 15px;
-        &:nth-of-type(3){
-            border-bottom: unset;
+        &:nth-of-type(1),
+        &:nth-of-type(2){
+            &::after{
+                content: '';
+                width: 100%;
+                height: 1px;
+                background: red;
+                margin-top: 10px;
+                background: linear-gradient(to right, #FFB78F, #DB73FF);
+                box-shadow: 0.790625px 0.790625px 3.55781px #91009D;
+            }
         }
-
+        &:nth-of-type(3),&:nth-of-type(4){
+            padding-bottom: 7px;
+        }
+        @media(max-width:768px){
+           gap: 2px ;
+        //    padding: 7px 0 7px 10px;
+        padding: 0;
+        }
     }
     &-name{
         font-family: $fontChakra;
         font-weight: 500;
         font-size: 37px;
-        line-height: 48px;
         letter-spacing: 0.11em;
+        @media(max-width:768px){
+            font-size: 15px;
+            margin-bottom: 2px;
+        }
     }
     &-discription{
         font-size: 24px;
         line-height: 29px;
+        @media(max-width:768px){
+            font-size: 11px;
+            line-height: 12px;
+            white-space: nowrap;
+        }
     }
-    // MOBILE
-
+    // -----------------------------------------MOBILE-----------------------------------------
     &-mobile{
         display: none;
         .token-roadmap__card{
@@ -131,7 +187,7 @@
         }
         &__wrapper{
             display: flex;
-            gap: 25px;
+            gap: 56px;
             justify-content: center;
         }
         &__decor{
@@ -142,10 +198,17 @@
         }
         &-line{
             position: relative;
-            height: 300px;
+            height: 550px;
             width: 5px;
             background: linear-gradient(103.59deg, #FC84FF 13.23%, #54D1FA 91.95%);
-            &::after{
+            @media(max-width:1024px){
+                height: 451px;
+            }
+            @media(max-width:768px){
+                height: 200px;
+            }
+            // STEP
+            &:after{
                 content: "STEP 1";
                 writing-mode: vertical-rl;
                 position: absolute;
@@ -173,15 +236,14 @@
                 padding: 6px;
                 background-image: linear-gradient(45deg, #54D6FF, #F36AFF);
                 -webkit-mask: 
-                  linear-gradient(#fff 0 0) content-box, 
-                  linear-gradient(#fff 0 0);
+                linear-gradient(#fff 0 0) content-box, 
+                linear-gradient(#fff 0 0);
                 -webkit-mask-composite: xor;
-                        mask-composite: exclude;
+                    mask-composite: exclude;
                 pointer-events: none;
                 transition: all .5s ease-in-out;
              }
         }
-      
         // АНИМАЦИЯ КРУГА
         [data-aos="circle-animation"] {
             transition-property: transform, opacity;
@@ -191,13 +253,11 @@
                 transition-property: transform, opacity;
                  opacity: 1;
             }
-    }
-
+         }
         // АНИМАЦИЯ ЛИНИИ
         [data-aos="line-animation"] {
             transition-property: transform, opacity;
             opacity: 0;
-        
             &.aos-animate {
                 transition: all 0.3s ease-in-out;
                 transition-property: transform, opacity;
@@ -205,15 +265,30 @@
                 animation: lineDown  .8s ;
              
             }
+         }
     }
-}
 
 }
+
+
 @keyframes lineDown {
     0%{
         height: 0;
     }
     100%{
-        height: 300px;
+        @media(max-width: 1024px){
+            height: 451px;
+        }
+        @media(max-width: 768px){
+            height: 200px;
+           
+        }
     }
+}
+
+
+.column__wrapper{
+    text-align: initial;
+    margin-left: 10px;
+    padding-top: 12px;
 }
