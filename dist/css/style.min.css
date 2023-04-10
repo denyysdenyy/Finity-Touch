@@ -2313,7 +2313,7 @@ body._lock {
   border-radius: 60px 0;
   border: 3px solid transparent;
   color: #fff;
-  background: linear-gradient(148.71deg, #b2ff0f 10.47%, #76ffef 88.29%);
+  background: linear-gradient(148.71deg, #FC84FF 10.47%, #54D1FA 88.29%);
   -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
   -webkit-mask-composite: xor;
   mask-composite: exclude;
