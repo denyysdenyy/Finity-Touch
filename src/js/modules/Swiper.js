@@ -54,13 +54,11 @@ function cardSwiper(){
 
     breakpoints:{
       320:{
-        slidesPerView:1,
+        slidesPerView:2,
         spaceBetween:51,
         centeredSlides: true,
       },
-      768:{
-        slidesPerView:2,
-      }
+      
     }
   });
 }

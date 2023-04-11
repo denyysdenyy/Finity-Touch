@@ -1,0 +1,23 @@
+.marketplace-hero {
+    padding-top: 334px;
+
+    // .marketplace-hero__container
+
+    &__container {
+        text-align: center;
+    }
+    // .marketplace-hero-title
+
+    &-title {
+        font-family: $fontChakra;
+        font-weight: 600;
+        font-size: 150px;
+        letter-spacing: 0.12em;
+        @media(max-width:768px){
+            font-size: 50px;
+            line-height: 65px;
+        }
+    }
+    
+}
+

@@ -1,6 +1,9 @@
+    const tokenFormInput = document.querySelector('.token-adress__form-input');
+if(tokenFormInput){
+    tokenHandler()
+}
 function tokenHandler(){
     const tokenFormBtn = document.querySelector('.token-adress__form-button'),
-          tokenFormInput = document.querySelector('.token-adress__form-input'),
           tokenForm = document.querySelector('.token-adress__form'),
           tokenCopyMessage = document.querySelector('.copy');
 
@@ -17,4 +20,3 @@ function tokenHandler(){
      })
 }
 
-tokenHandler()

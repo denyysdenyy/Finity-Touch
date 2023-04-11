@@ -893,6 +893,11 @@ body._lock {
   color: #fff;
   transition: all 0.3s ease-in-out;
 }
+@media (min-width: 1280px) {
+  .footer__link:hover {
+    color: #F16BFF;
+  }
+}
 .footer__buttons {
   margin-left: auto;
   display: flex;
@@ -2380,7 +2385,7 @@ body._lock {
   display: none;
   padding-bottom: 160px;
 }
-@media (min-width: 1440px) {
+@media (min-width: 1441px) {
   .token-roadmap {
     display: block;
   }
@@ -2660,7 +2665,7 @@ body._lock {
 .token-adress {
   display: block;
 }
-@media (max-width: 1439px) {
+@media (max-width: 1400px) {
   .token-adress {
     display: none;
   }
@@ -2727,11 +2732,16 @@ body._lock {
   position: relative;
   left: 88%;
   max-width: 380px;
-  border-radius: 2%;
+  border-radius: 50px;
   transform: translateY(215px);
   opacity: 0;
   overflow: hidden;
   transition: all 0.4s ease-in-out;
+}
+@media (max-width: 1440px) {
+  .copy {
+    left: 74.5%;
+  }
 }
 .copy.show {
   opacity: 1;
@@ -2745,4 +2755,23 @@ body._lock {
   -webkit-text-fill-color: transparent;
   background-clip: text;
   text-fill-color: transparent;
+}
+
+.marketplace-hero {
+  padding-top: 334px;
+}
+.marketplace-hero__container {
+  text-align: center;
+}
+.marketplace-hero-title {
+  font-family: "Chakra Petch", sans-serif;
+  font-weight: 600;
+  font-size: 150px;
+  letter-spacing: 0.12em;
+}
+@media (max-width: 768px) {
+  .marketplace-hero-title {
+    font-size: 50px;
+    line-height: 65px;
+  }
 }

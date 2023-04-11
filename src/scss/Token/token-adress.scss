@@ -1,5 +1,5 @@
 .token-adress {
-    @media(max-width: 1439px){
+    @media(max-width: 1400px){
         display: none;
     }
     display: block;
@@ -76,6 +76,9 @@
 
 
 .copy{
+    @media(max-width:1440px){
+        left: 74.5%;
+    }
     background: #1E1E1E;
     padding: 25px 0;
     padding-left: 16px;
@@ -84,7 +87,7 @@
     position: relative;
     left: 88%;
     max-width: 380px;
-    border-radius: 2%;
+    border-radius: 50px;
     transform: translateY(215px);
     opacity: 0;
     overflow: hidden;

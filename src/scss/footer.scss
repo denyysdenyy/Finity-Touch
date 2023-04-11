@@ -78,6 +78,11 @@
         font-size: 22px;
         color: #fff;
         transition: all .3s ease-in-out;
+        @media(min-width:1280px){
+            &:hover{
+                color: #F16BFF;
+            }
+        }
     }
     &__buttons{
         margin-left: auto;
